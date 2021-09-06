@@ -17,14 +17,13 @@ const UpdatePost = () => {
     body: "",
   };
 
-  const handleFindUserById = (values: initialValues) => {
-    console.log(values);
+  const handleUpdatePost = (values: initialValues) => {
     updatePost(values);
   };
 
   return (
     <div>
-      <Formik initialValues={newInputFieldValues} onSubmit={(values: initialValues) => handleFindUserById(values)}>
+      <Formik initialValues={newInputFieldValues} onSubmit={(values: initialValues) => handleUpdatePost(values)}>
         <Form>
           <Field type="text" id="id" name="id" placeholder="post id" />
           <ErrorMessage name="id" component="div" className="error-message" />

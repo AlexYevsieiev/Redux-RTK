@@ -15,13 +15,13 @@ const AddNewPost = () => {
     body: "",
   };
 
-  const handleFindUserById = (values: initialValues) => {
+  const handleAddPost = (values: initialValues) => {
     addPost(values);
   };
 
   return (
     <div>
-      <Formik initialValues={newInputFieldValues} onSubmit={(values: initialValues) => handleFindUserById(values)}>
+      <Formik initialValues={newInputFieldValues} onSubmit={(values: initialValues) => handleAddPost(values)}>
         <Form>
           <Field type="text" id="title" name="title" placeholder="post title" />
           <ErrorMessage name="title" component="div" className="error-message" />
